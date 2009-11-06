@@ -1,0 +1,65 @@
+h1. Layar POIs publish server for Google App Engine
+
+*Author:* "Yoshimov@pobox.com":http://yoshimov.com
+
+h2. What is this?
+
+"Layar":http://layar.com is a great AR application for Android and iPhone, but it is little hard to create your own layer, because it requires web server to serve your POIs to search.
+
+But using this program, you could make and store your own layer in the "Google App Engine":http://appengine.google.com and publish it.
+
+h2. Install
+
+First, you must create application name on Google App Engine page.
+Login to the Google App Engine and push "Create an Application" button.
+The application name becomes part of the web service URL.
+
+And then, just change the application name and version in the "app.yaml" file, and upload the application into Google App Engine like this:
+
+bq. > python appcfg.py update /home/somewhere
+
+h2. Create contents
+
+In this program, you could create contents using "Google Map":http://maps.google.com .
+You can create POIs in the my map.
+The title of the marker will be the Layar's POI title, and description will be the attribute.
+The description *must be* the HTML form and it must not include any HTML tags.
+And you can write special header of each line of the description to specify following information.
+
+|_. format|_. description|
+|image:http://...|Image of the point.|
+|line2:..|Second line of the point description.|
+|line3:..|Third line of the point description.|
+|http://..|URL action|
+|tel:..|Call action|
+
+These are the sample my map created by me.
+
+* "Santa Barbara Zoo":http://maps.google.com/maps/ms?ie=UTF8&hl=ja&msa=0&msid=104272255292167604247.000475cb40cdd45fffdb9&ll=34.420598,-119.665301&spn=0.00281,0.005509&z=18
+* "UCSB Campus guide":http://maps.google.com/maps/ms?ie=UTF8&hl=ja&msa=0&msid=100369534300225273734.0004746c3e4a3538d8ef0&ll=34.415292,-119.848408&spn=0.022481,0.044074&z=15
+
+h2. Create your own layer on Layar Publishing site
+
+Then, you should create your layer in the "Layar Publishing site":http://dev.layar.com/publishing/ .
+You must specify the unique layer name, and POI URL should be like this:
+
+bq. http://[applicationname].appspot.com/search
+
+And also, you should create nice 64x64 icon for the layer.
+
+h2. Update POIs
+
+And then, you should regist POIs into your application.
+
+Open the following URL:
+
+bq. http://[applicationname].appspot.com/update
+
+Enter your layer's name and my map's RSS URL, and press submit button.
+You will see the done message, if the update succeeded.
+
+You could regist any number of layers in the same application.
+
+h2. Test and publish layer
+
+Please test your layer and publish it along Layar documentations.
