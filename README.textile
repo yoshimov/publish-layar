@@ -10,7 +10,8 @@ But using this program, you could make and store your own layer in the "Google A
 
 h2. Install
 
-First, you must create application name on Google App Engine page.
+First, you must download and install the "Google App Engine SDK for Python":http://code.google.com/appengine .
+And create application name on Google App Engine page.
 Login to the Google App Engine and push "Create an Application" button.
 The application name becomes part of the web service URL.
 
