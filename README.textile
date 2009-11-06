@@ -28,10 +28,11 @@ And you can write special header of each line of the description to specify foll
 
 |_. format|_. description|
 |image:http://...|Image of the point.|
-|line2:..|Second line of the point description.|
-|line3:..|Third line of the point description.|
+|2:..|Second line of the point description.|
+|3:..|Third line of the point description.|
 |http://..|URL action|
 |tel:..|Call action|
+|mailto:..|Send mail action|
 
 These are the sample my map created by me.
 
