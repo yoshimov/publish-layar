@@ -65,3 +65,7 @@ You could regist any number of layers in the same application.
 h2. Test and publish layer
 
 Please test your layer and publish it along Layar documentations.
+
+h2. License
+
+This program could be redistributed under the GPL v2.
