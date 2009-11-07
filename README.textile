@@ -59,6 +59,7 @@ bq. http://[applicationname].appspot.com/update
 
 Enter your layer's name and my map's RSS URL, and press submit button.
 You will see the done message, if the update succeeded.
+If you want to modify it, please update same layer again.
 
 You could regist any number of layers in the same application.
 
